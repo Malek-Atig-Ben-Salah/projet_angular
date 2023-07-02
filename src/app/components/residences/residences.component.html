@@ -1,0 +1,24 @@
+<h1>residences List</h1>
+
+<form #f="ngForm">
+    <input name="search" type="number">
+<table class="table table-bordered">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>address</th>
+    <th>image</th>
+    <td>appartement</td>
+  </tr>
+  <tr *ngFor="let residence of residences">
+    <td>{{ residence.id }}</td>
+    <td>{{ residence.name }}</td>
+    <td>{{ residence.address }}</td>
+    <td>{{ residence.image }}</td>
+    <td><a routerLink = "add-appartement">appartement</a></td>
+  </tr>
+  <div *ngIf="!residences">
+        residence not found
+  </div>
+</table>
+</form>

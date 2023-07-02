@@ -1,0 +1,22 @@
+{
+  "residences": [
+    {
+      "id": 1,
+      "name": "residence",
+      "address": "charguia",
+      "image": "image.jpg"
+    },
+    {
+        "id": 2,
+        "name": "residence2",
+        "address": "marsa",
+        "image": "image2.jpg"
+      },
+      {
+        "id": 3,
+        "name": "residence",
+        "address": "kram",
+        "image": "image3.jpg"
+      }
+  ]
+}

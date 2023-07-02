@@ -1,0 +1,91 @@
+<div class="container">
+  <h2>add appartement</h2>
+  <form ngForm #f="ngForm" (ngSubmit)="add(f)" >
+    <div class="form-group">
+      <label>id</label>
+      <input
+        name="id"
+        type="text"
+        class="form-control"
+        ngModel
+        #id="ngModel"
+      />
+    </div>
+    <div class="form-group">
+      <label>numAppart</label>
+      <input
+        type="text"
+        class="form-control"
+        name="numAppart"
+        ngModel
+        #numAppart="ngModel"
+        required
+        pattern="[0..9]"
+      />
+    </div>
+    <div *ngIf="numAppart.errors">num appart is required</div>
+    <div class="form-group">
+      <label>surface</label>
+      <input
+        type="text"
+        class="form-control"
+        name="surface"
+        ngModel
+        #surface="ngModel"
+      />
+    </div>
+    <div class="form-group">
+      <label>terasse</label>
+      <input
+        type="text"
+        class="form-control"
+        name="terasse"
+        ngModel
+        #terasse="ngModel"
+      />
+    </div>
+    <div *ngIf="terasse.errors">num appart is required</div>
+    <div class="form-group" *ngIf="terasse">
+      <label>surfaceTerrace</label>
+      <input
+        type="text"
+        class="form-control"
+        name="surfaceTerrace"
+        ngModel
+        #surfaceTerrace="ngModel"
+      />
+    </div>
+    <div class="form-group">
+      <label>categorie</label>
+      <input
+        type="text"
+        class="form-control"
+        name="categorie"
+        ngModel
+        #categorie="ngModel"
+      />
+    </div>
+    <div class="form-group">
+      <label>description</label>
+      <input
+        type="text"
+        class="form-control"
+        name="description"
+        ngModel
+        #description="ngModel"
+      />
+    </div>
+    <div class="form-group">
+      <label>residence</label>
+      <input
+        type="text"
+        class="form-control"
+        name="residence"
+        ngModel
+        #residence="ngModel"
+      />
+    </div>
+    <br />
+    <button class="btn btn-success" [disabled]="f.invalid" >add</button>
+  </form>
+</div>
